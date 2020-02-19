@@ -1,3 +1,8 @@
+---
+I am appreciating the auther of this tool for developing such a good tools, but unlucky that for latest version of Chrome the `f` or `F` hint function is not works anymore, even some other functions, i try to solved couple of bugs with this folk since last version is not updates for a long time, people who loves this extension and would like to use it in the future please update by yourselfs and pack you personal extension in the chrome. 
+---
+
+
 # [Like cVim? Consider donating! https://www.paypal.me/1995eaton](https://www.paypal.me/1995eaton)
 
 # What is cVim?
