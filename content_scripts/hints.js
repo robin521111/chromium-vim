@@ -176,7 +176,14 @@ Hints.dispatchAction = function(link, shift) {
     });
     break;
   case 'script':
-    eval(settings.FUNCTIONS[this.scriptFunction])(link);
+    try {
+      if (settings.FUNCTIONS && settings.FUNCTIONS[this.scriptFunction] &&
+          typeof settings.FUNCTIONS[this.scriptFunction] === 'string') {
+        eval(settings.FUNCTIONS[this.scriptFunction])(link);
+      }
+    } catch (e) {
+      console.error('Error executing script function:', this.scriptFunction, e);
+    }
     break;
   default:
     if (node === 'textarea' || (node === 'input' &&

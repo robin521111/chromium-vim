@@ -292,7 +292,14 @@ chrome.extension.onMessage.addListener(function(request, sender, callback) {
         Mappings.actions[request.name](1);
         break;
       case 'eval':
-        eval(settings.FUNCTIONS[request.name] + request.args);
+        try {
+          if (settings.FUNCTIONS && settings.FUNCTIONS[request.name] && 
+              typeof settings.FUNCTIONS[request.name] === 'string') {
+            eval(settings.FUNCTIONS[request.name] + request.args);
+          }
+        } catch (e) {
+          console.error('Error executing user function:', e);
+        }
         break;
       }
     }

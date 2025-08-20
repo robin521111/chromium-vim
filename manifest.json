@@ -69,7 +69,7 @@
     "webNavigation"
   ],
   "background": {
-    "persistant": false,
+    "persistent": false,
     "scripts": [
       "content_scripts/utils.js",
       "content_scripts/cvimrc_parser.js",

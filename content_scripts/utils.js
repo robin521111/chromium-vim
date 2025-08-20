@@ -320,8 +320,8 @@ var mapDOM = function(root, accept) {
     }
   }
   var acceptedValues = [];
-  for (i = 1; i < nodes.length; i++) {
-    var value = accept(nodes[i]);
+  for (var j = 1; j < nodes.length; j++) {
+    var value = accept(nodes[j]);
     if (value !== null)
       acceptedValues.push(value);
   }

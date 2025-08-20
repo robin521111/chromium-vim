@@ -11,5 +11,8 @@
     "highlight.js": "latest",
     "markdown-it": "latest",
     "pegjs": "latest"
+  },
+  "dependencies": {
+    "eslint": "^8.57.0"
   }
 }
