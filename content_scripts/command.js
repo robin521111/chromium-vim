@@ -1197,7 +1197,13 @@ Command.init = function(enabled) {
     addListeners();
     if (typeof settings.AUTOFUNCTIONS === 'object') {
       Object.getOwnPropertyNames(settings.AUTOFUNCTIONS).forEach(function(name) {
-        eval('(function(){' + settings.AUTOFUNCTIONS[name] + '})()');
+        try {
+          if (typeof settings.AUTOFUNCTIONS[name] === 'string') {
+            eval('(function(){' + settings.AUTOFUNCTIONS[name] + '})()');
+          }
+        } catch (e) {
+          console.error('Error executing autofunction:', name, e);
+        }
       });
     }
   } else {
