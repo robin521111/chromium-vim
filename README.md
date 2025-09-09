@@ -3,7 +3,7 @@ I am appreciating the auther developed such a good extensions, but unlucky that 
 ---
 
 
-# [Like cVim? Consider donating! https://www.paypal.me/1995eaton](https://www.paypal.me/1995eaton)
+# 
 
 # What is cVim?
 
